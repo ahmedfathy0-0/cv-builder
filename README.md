@@ -1,4 +1,5 @@
 # CV Builder
+<img width="1896" height="1150" alt="image" src="https://github.com/user-attachments/assets/225edc56-3b9d-4ff1-b748-12e0ea9f09a0" />
 
 A modern, full-stack CV/Resume builder application that allows users to create, customize, and export professional resumes with ease.
 
