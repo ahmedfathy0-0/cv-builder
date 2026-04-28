@@ -1,0 +1,187 @@
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[pdftex]{hyperref}
+\usepackage{fancyhdr}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1.0in}
+\addtolength{\topmargin}{-.7in}
+\addtolength{\textheight}{1.4in}
+
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+\linespread{0.97}\selectfont
+\setlist[itemize]{leftmargin=*,topsep=2pt,itemsep=2pt,parsep=0pt,partopsep=0pt}
+
+\titleformat{\section}{
+  \vspace{-10pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+\newcommand{\resumeItem}[2]{\item\small{\textbf{#1}{: #2 \vspace{-2pt}}}}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeProjectSubheading}[3]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{#1} $|$ \textit{\small#2} & #3 \\
+    \end{tabular*}\vspace{-13pt}
+}
+
+\newcommand{\resumeActivitySubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{#1} $|$ \textit{\small#3} & \textit{\small#2} $|$ \textit{\small #4} \\
+    \end{tabular*}\vspace{-13pt}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+\renewcommand{\labelitemii}{$\circ$}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\vspace*{0.3pt}\begin{itemize}[leftmargin=*,topsep=0pt,itemsep=1.2pt,parsep=0pt,partopsep=0pt]}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-3pt}}
+
+\begin{document}
+
+\begin{center}
+    \textbf{\Huge \scshape Ahmed Fathy} \\ \vspace{1pt}
+    \small Software Engineer \\
+    \href{mailto:ahmedfathi20044002@gmail.com}{\underline{ahmedfathi20044002@gmail.com}} $|$
+    +20 155 285 1443 $|$
+    \href{https://www.linkedin.com/in/ahmedfathy-x1}{\underline{LinkedIn}} $|$
+    \href{https://github.com/ahmedfathy0-0}{\underline{GitHub}} $|$
+    \href{https://www.mrfathi.tech/}{\underline{Portfolio}} $|$
+    Haram, Giza, Egypt 12556
+\end{center}
+
+
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Cairo University, Faculty of Engineering}{Giza, Egypt}
+      {B.Sc. in Computer Engineering;  GPA: 3.7}{2022 -- 2027}
+  \resumeSubHeadingListEnd
+  \vspace{-2pt}
+\section{Experience}
+  \resumeSubHeadingListStart
+    \resumeActivitySubheading
+      {Al Nada Scientific Office}{Cairo, Egypt}{Software Developer (Part-time)}{June 2022 -- 2025}
+      \resumeItemListStart
+        \resumeItem{ERP System}
+          {Developed a local desktop application (packaged with Electron) managing customers, suppliers, inventory, and sales records using React.js, Express.js, and PostgreSQL.}
+        \resumeItem{Corporate Web Solution}
+          {Built the official company website integrated with an e-commerce platform designed to seamlessly manage and showcase sponsors, partners, services, and dynamic product catalogs.}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+  \vspace{-2pt}
+\section{Projects}
+  \resumeSubHeadingListStart
+    \resumeProjectSubheading
+      {\href{https://tccd.eng.cu.edu.eg/}{\textbf{TCCD Official Website \& Management System}}}{Frontend Development | React,Typescript}{\textit{\small 2026}}
+      \resumeItemListStart
+        \resumeItem{Impact}
+          {Developed a comprehensive student activity platform that successfully scaled to support over 20,000 active users.}
+        \resumeItem{Core Features}
+          {Built a scalable event and judging system with slot management, waitlists, and role-based access.}
+        \resumeItem{Administration}
+          {Developed an admin dashboard with analytics to manage events, users, and company profiles}
+      \resumeItemListEnd
+    \vspace{4pt}
+    \resumeProjectSubheading
+      {\href{https://github.com/SWEProject25}{\textbf{Hankers (Social Platform)}}}{Full-Stack Engineering}{\textit{\small 2025}}
+      \resumeItemListStart
+        \resumeItem{Architecture}
+          {Built scalable social platform using Microservices principles, React.js, and TypeScript.}
+        \resumeItem{Frontend}
+          {Implemented responsive UI design and asynchronous API integration via AJAX.}
+        \resumeItem{DevOps}
+          {Established CI/CD pipelines and containerized services using Docker for consistent deployment.}
+      \resumeItemListEnd
+    \vspace{4pt}
+    \resumeProjectSubheading
+      {\href{https://github.com/ahmedfathy0-0/NexaMart.git}{\textbf{NexaMart}}}{E-commerce Solution, Full-Stack}{\textit{\small 2025}}
+      \resumeItemListStart
+        \resumeItem{Stack}
+          {Next.js (TypeScript), Redux Toolkit, Laravel 11, and MySQL.}
+        \resumeItem{Functionality}
+          {Implemented secure authentication (Sanctum), shopping cart logic, real-time order processing, and administrative analytics dashboard.}
+      \resumeItemListEnd
+    \vspace{4pt}
+    \resumeProjectSubheading
+      {\href{https://github.com/ahmedfathy0-0/Pharoh-s-StarCode}{\textbf{Interactive Orrery -- NASA Space Apps Hackathon}}}{3D Space Simulation, React.js}{\textit{\small Oct 2024}}
+      \resumeItemListStart
+        \resumeItem{Hackathon Project}
+          {Developed during NASA Space Apps Challenge 2024, simulating orbital mechanics and near-Earth object trajectories using React.js and Three.js.}
+      \resumeItemListEnd
+    \vspace{4pt}
+    \resumeProjectSubheading
+      {\href{https://github.com/ahmedfathy0-0/Image-Colorization-of-Historical-Photos}{\textbf{Image Restoration Pipeline}}}{Deep Learning \& Computer Vision, Python}{\textit{\small 2024}}
+      \resumeItemListStart
+        \resumeItem{Pipeline}
+          {Constructed end-to-end restoration pipeline: Denoising, Deblurring, and Inpainting.}
+        \resumeItem{Algorithms}
+          {Applied Telea (FMM) inpainting and deep learning models to restore damaged historical photographs.}
+      \resumeItemListEnd
+    \vspace{4pt}
+    \resumeProjectSubheading
+      {\href{https://github.com/ahmedfathy0-0/Grand-Tide}{\textbf{Ocean Adventure: Grand Tide (3D Survival RPG)}}}{C++, OpenGL, GLSL}{\textit{\small 2026}}
+      \resumeItemListStart
+        \resumeItem{Graphics \& Rendering}
+          {Built a custom 3D rendering engine utilizing a Forward Renderer with transparent object sorting, Phong shading models, and post-processing effects.}
+        \resumeItem{Shader Programming}
+          {Implemented custom GLSL shaders, including a dynamic water shader featuring Fresnel reflections, refraction mapping, and summed sine wave displacement.}
+        \resumeItem{Architecture \& Logic}
+          {Engineered a lightweight Entity-Component-System (ECS) to handle 3D meshes, bounding-box collision detection, ray-casting combat, and procedural entity generation.}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+  \vspace{-2pt}
+\section{Student Activities}
+  \resumeSubHeadingListStart
+    \resumeActivitySubheading
+      {IEEE}{Cairo}{UI/UX Designer - Frontend Team Leader}{Oct 2025 -- Present}
+      \resumeItemListStart
+        \resumeItem{Portfolio Platform Development}
+          {Engineered comprehensive web platform featuring workshop and event management systems with admin dashboard for content creation, role-based access control enabling instructors to upload course materials and students to register for workshops and events.}
+      \resumeItemListEnd
+    \vspace{4pt}
+    \resumeActivitySubheading
+      {Physics Helping District (PhD)}{Cairo}{Team Leader}{June 2022 -- 2024}
+      \resumeItemListStart
+        \resumeItem{Mentorship}
+          {Led peer tutoring initiative in electronics, achieving measurable academic improvement.}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+  \vspace{-2pt}
+\section{Technical Skills}
+ \resumeSubHeadingListStart
+    \item{\textbf{Programming Languages}{: C++ Programming, Python, JavaScript, TypeScript, SQL, PHP, Java, Assembly Language, OpenGL, GLSL}}
+    \item{\textbf{Core Computing Concepts}{: Data Structures, Algorithms, Object-Oriented Programming, Design Patterns, Operating Systems, System Architecture, Cryptography}}
+    \item{\textbf{Systems Programming}{: Unix/Linux Development, Multithreading, Memory Management, Network Socket Programming}}
+    \item{\textbf{Backend Development \& DevOps}{: Node.js Runtime, Express Framework, Laravel, RESTful APIs, Docker Containers, Git Version Control, CI/CD Pipelines}}
+ \resumeSubHeadingListEnd
+ \vspace{-2pt}
+
+\end{document}

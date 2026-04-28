@@ -1,0 +1,31 @@
+{
+  "personalInfo": {
+    "name": "John Doe",
+    "title": "Software Developer",
+    "email": "john.doe@example.com",
+    "phone": "+1 234 567 8900",
+    "linkedin": "https://www.linkedin.com/in/johndoe",
+    "github": "https://github.com/johndoe",
+    "portfolio": "https://johndoe.dev",
+    "address": "New York, NY 10001"
+  },
+  "education": {
+    "university": "Example University",
+    "location": "New York, NY",
+    "degree": "B.Sc. in Computer Science",
+    "gpa": "3.5",
+    "startYear": "2020",
+    "endYear": "2024"
+  },
+  "summaries": [
+    {
+      "id": "summary-default",
+      "variant": "Software Developer",
+      "content": "Passionate Software Developer with experience in building web applications and solving complex problems. Eager to learn new technologies and contribute to impactful projects."
+    }
+  ],
+  "experiences": [],
+  "projects": [],
+  "activities": [],
+  "skills": []
+}

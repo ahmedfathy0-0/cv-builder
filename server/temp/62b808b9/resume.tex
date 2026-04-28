@@ -1,0 +1,154 @@
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[pdftex]{hyperref}
+\usepackage{fancyhdr}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1.0in}
+\addtolength{\topmargin}{-.7in}
+\addtolength{\textheight}{1.4in}
+
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+\setlist[itemize]{leftmargin=*}
+
+\titleformat{\section}{
+  \vspace{-8pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-4pt}]
+
+\newcommand{\resumeItem}[2]{\item\small{\textbf{#1}{: #2 \vspace{-2pt}}}}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeProjectSubheading}[3]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{#1} $|$ \textit{\small#2} & #3 \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeActivitySubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{#1} $|$ \textit{\small#3} & \textit{\small#2} $|$ \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+\renewcommand{\labelitemii}{$\circ$}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+\begin{document}
+
+\begin{center}
+    \textbf{\Huge \scshape Ahmed Fathy} \\ \vspace{1pt}
+    \small Software Engineer \\
+    \href{mailto:ahmedfathi20044002@gmail.com}{\underline{ahmedfathi20044002@gmail.com}} $|$
+    +20 155 285 1443 $|$
+    \href{https://www.linkedin.com/in/ahmedfathy-x1}{\underline{LinkedIn}} $|$
+    \href{https://github.com/ahmedfathy0-0}{\underline{GitHub}} $|$
+    \href{https://www.mrfathi.tech/}{\underline{Portfolio}} $|$
+    Haram, Giza, Egypt 12556
+\end{center}
+
+
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Cairo University, Faculty of Engineering}{Giza, Egypt}
+      {B.Sc. in Computer Engineering;  GPA: 3.7}{2022}
+  \resumeSubHeadingListEnd
+\section{Experience}
+  \resumeSubHeadingListStart
+    \resumeActivitySubheading
+      {Al Nada Scientific Office}{Cairo, Egypt}{Software Developer (Part-time)}{June 2022 -- 2025}
+      \resumeItemListStart
+        \resumeItem{ERP System}
+          {Developed a local desktop application (packaged with Electron) managing customers, suppliers, inventory, and sales records using React.js, Express.js, and PostgreSQL.}
+        \resumeItem{Corporate Web Solution}
+          {Built the official company website integrated with an e-commerce platform designed to seamlessly manage and showcase sponsors, partners, services, and dynamic product catalogs.}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+\section{Projects}
+  \resumeSubHeadingListStart
+    \resumeProjectSubheading
+      {Tactic (Robotics \& AI)}{Embedded Systems}{\href{https://github.com/roboSobia}{Source Code} $|$ \textit{\small 2024}}
+      \resumeItemListStart
+        \resumeItem{System Integration}
+          {Developed browser-controlled robotics suite integrating AI computer vision with low-latency hardware control.}
+        \resumeItem{Firmware}
+          {Programmed ESP32 microcontrollers to handle WebSocket communication for real-time motor control and telemetry.}
+        \resumeItem{Backend Processing}
+          {Deployed YOLOv5 and OpenCV on host server to process visual feedback and automate robotic decision-making.}
+      \resumeItemListEnd
+    \vspace{4pt}
+    \resumeProjectSubheading
+      {TCCD Official Website \& Management System}{Frontend Development | React,Typescript}{\href{https://tccd.eng.cu.edu.eg/}{Live Preview} $|$ \textit{\small 2026}}
+      \resumeItemListStart
+        \resumeItem{Impact}
+          {Developed a comprehensive student activity platform that successfully scaled to support and manage over 20,000 active users.}
+        \resumeItem{Core Features}
+          {Engineered a robust event and judging system that handles registration slots, waiting lists, and distinct role-based access for members, standard users, and corporate entities.}
+        \resumeItem{Administration}
+          {Built an advanced admin dashboard equipped with user-facing analytics to streamline the management of events, user data, and company profiles.}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+\section{Student Activities}
+  \resumeSubHeadingListStart
+    \resumeActivitySubheading
+      {IEEE}{Cairo}{UI/UX Designer - Frontend Team Leader}{Oct 2025 -- Present}
+      \resumeItemListStart
+        \resumeItem{Portfolio Platform Development}
+          {Engineered comprehensive web platform featuring workshop and event management systems with admin dashboard for content creation, role-based access control enabling instructors to upload course materials and students to register for workshops and events.}
+      \resumeItemListEnd
+    \vspace{4pt}
+    \resumeActivitySubheading
+      {Technical Center for Career Development (TCCD)}{Cairo}{Frontend Developer}{June 2025 -- Present}
+      \resumeItemListStart
+        \resumeItem{Portfolio Platform Development}
+          {Built an integrated portfolio, event management, HR, and judging system with role-based access, dashboards, analytics, attendance tracking, custom forms, and evaluation workflows to streamline operations and decision-making.}
+      \resumeItemListEnd
+    \vspace{4pt}
+    \resumeActivitySubheading
+      {NASA Space Apps Challenge}{Cairo}{Participant -- Project: "Orrery"}{Oct 2024}
+      \resumeItemListStart
+        \resumeItem{Orrery App}
+          {Developed an interactive orrery app visualizing near-Earth objects using React and Three.js.}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+\section{Technical Skills}
+ \resumeSubHeadingListStart
+    \item{\textbf{Programming Languages}{: C/C++, Python, JavaScript, TypeScript, SQL, PHP, Java, Assembly (x86/MIPS), OpenGL, GLSL}}
+    \item{\textbf{Frontend \& Full-Stack Web}{: React.js, Next.js, Redux Toolkit, Tailwind CSS, Three.js, Node.js, Express.js, RESTful APIs, GraphQL, PostgreSQL, MongoDB, Laravel}}
+    \item{\textbf{AI \& Machine Learning}{: PyTorch, TensorFlow, Keras, OpenCV, YOLO, Deep Learning, CNNs, Image Processing, NumPy, Pandas, Scikit-learn}}
+    \item{\textbf{Robotics, IoT \& Systems}{: ESP32, Arduino, Unix/Linux Development, Multithreading, Memory Management, Network Socket Programming, WebSockets}}
+    \item{\textbf{DevOps \& Core Concepts}{: Docker, Git Version Control, CI/CD Pipelines, Object-Oriented Programming, Microservices, System Architecture, Algorithms}}
+ \resumeSubHeadingListEnd
+
+\end{document}
