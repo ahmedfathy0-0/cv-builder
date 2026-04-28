@@ -95,12 +95,6 @@ This entire application was generated from a single prompt using Claude Sonnet 4
 - Responsive UI components
 - Build configuration and tooling setup
 
-This demonstrates the power of AI-assisted development and serves as an example of how modern AI tools can accelerate the software development process.
-
-## License
-
-This project is open source and available under the MIT License.
-
 ## Contact
 
 - **Author**: Ahmed Fathy
