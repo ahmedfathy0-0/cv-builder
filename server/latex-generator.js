@@ -30,18 +30,18 @@ function generatePreamble(compact = false) {
   const textWidthAdjust = compact ? '1.24in' : '1.0in';
   const topMarginAdjust = compact ? '-0.82in' : '-.7in';
   const textHeightAdjust = compact ? '1.75in' : '1.4in';
-  const lineSpread = compact ? '\\linespread{0.95}\\selectfont' : '\\linespread{0.97}\\selectfont';
-  const sectionTitleVSpace = compact ? '-12pt' : '-10pt';
-  const sectionRuleVSpace = compact ? '-7pt' : '-5pt';
-  const resumeItemVSpace = compact ? '-3pt' : '-2pt';
-  const subheadingVSpace = compact ? '-6pt' : '-5pt';
-  const listSubheadingVSpace = compact ? '-5pt' : '-13pt';
-  const listEndVSpace = compact ? '-8pt' : '-3pt';
-  const subsectionListGap = compact ? '0.3pt' : '0.3pt';
-  const itemListItemSep = compact ? '0.7pt' : '1.2pt';
+  const lineSpread = compact ? '\\linespread{0.98}\\selectfont' : '\\linespread{1.05}\\selectfont';
+  const sectionTitleVSpace = compact ? '-10pt' : '-8pt';
+  const sectionRuleVSpace = compact ? '-6pt' : '-4pt';
+  const resumeItemVSpace = compact ? '-2pt' : '0pt';
+  const subheadingVSpace = compact ? '-5pt' : '-3pt';
+  const listSubheadingVSpace = compact ? '-5pt' : '-10pt';
+  const listEndVSpace = compact ? '-6pt' : '-2pt';
+  const subsectionListGap = compact ? '0.5pt' : '1pt';
+  const itemListItemSep = compact ? '1pt' : '2.5pt';
   const itemizeConfig = compact
     ? '\\setlist[itemize]{leftmargin=*,topsep=1pt,itemsep=1pt,parsep=0pt,partopsep=0pt}'
-    : '\\setlist[itemize]{leftmargin=*,topsep=2pt,itemsep=2pt,parsep=0pt,partopsep=0pt}';
+    : '\\setlist[itemize]{leftmargin=*,topsep=3pt,itemsep=3pt,parsep=0pt,partopsep=0pt}';
 
   return `\\documentclass[letterpaper,11pt]{article}
 
