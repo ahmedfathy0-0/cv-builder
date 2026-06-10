@@ -1,4 +1,5 @@
 # CV Builder
+<img width="1896" height="1150" alt="image" src="https://github.com/user-attachments/assets/225edc56-3b9d-4ff1-b748-12e0ea9f09a0" />
 
 A modern, full-stack CV/Resume builder application that allows users to create, customize, and export professional resumes with ease.
 
@@ -94,12 +95,6 @@ This entire application was generated from a single prompt using Claude Sonnet 4
 - Database structure and data management
 - Responsive UI components
 - Build configuration and tooling setup
-
-This demonstrates the power of AI-assisted development and serves as an example of how modern AI tools can accelerate the software development process.
-
-## License
-
-This project is open source and available under the MIT License.
 
 ## Contact
 
