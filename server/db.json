@@ -36,6 +36,36 @@
   ],
   "experiences": [
     {
+      "id": "exp-gsoc-2026",
+      "variant": "balanced-swe",
+      "company": "Synfig Studio (GSoC '26)",
+      "location": "Remote",
+      "role": "Open Source Contributor",
+      "dates": "May 2026 -- Aug 2026",
+      "items": [
+        {
+          "title": "FFD Engine Architecture",
+          "description": "Architected and implemented a Free-Form Deformation (FFD) engine from scratch, enabling animators to perform complex non-destructive 2D mesh warping on image textures."
+        },
+        {
+          "title": "Mesh Generation",
+          "description": "Engineered a custom Delaunay Triangulation algorithm to dynamically generate stable rendering meshes based on user-defined control points."
+        },
+        {
+          "title": "Coordinate Mapping",
+          "description": "Resolved complex coordinate-space mapping issues by implementing Inverse Transformation Matrices, successfully converting global canvas mouse interactions into transformed local-layer space (handling scale, skew, and rotation)."
+        },
+        {
+          "title": "Boundary System",
+          "description": "Designed an automated \\\"invisible boundary\\\" system that dynamically calculates bounding boxes and injects static anchor points, isolating mesh deformations and preventing unintended texture distortion."
+        },
+        {
+          "title": "UI Integration",
+          "description": "Integrated interactive UI states and canvas overlays utilizing Synfig's event-driven architecture (sigc++) and GTKmm, allowing real-time wireframe rendering and point manipulation."
+        }
+      ]
+    },
+    {
       "id": "exp-hardware",
       "variant": "hardware",
       "company": "Al Nada Scientific Office",
@@ -577,6 +607,33 @@
     }
   ],
   "skills": [
+    {
+      "id": "skills-balanced-swe",
+      "variant": "balanced-swe",
+      "label": "Balanced Software Engineer",
+      "categories": [
+        {
+          "label": "Programming Languages",
+          "items": "C++ (Advanced), Python, TypeScript, JavaScript, SQL, PHP"
+        },
+        {
+          "label": "Frontend & GUI",
+          "items": "React.js, Next.js, GTKmm, Tailwind CSS, Three.js, OpenGL"
+        },
+        {
+          "label": "Backend & Database",
+          "items": "Node.js, Express.js, Laravel, REST APIs, PostgreSQL, MongoDB"
+        },
+        {
+          "label": "Core Concepts",
+          "items": "Data Structures, Algorithms, Object-Oriented Programming, Linear Algebra, System Architecture"
+        },
+        {
+          "label": "DevOps & Tools",
+          "items": "Git Version Control, Docker Containers, CI/CD, Linux Development"
+        }
+      ]
+    },
     {
       "id": "skills-hardware",
       "variant": "hardware",

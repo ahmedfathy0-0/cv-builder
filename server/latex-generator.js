@@ -150,19 +150,24 @@ function generateEducation(edu) {
 `;
 }
 
-function generateExperience(exp) {
-  if (!exp) return '';
-  let items = exp.items.map(i =>
-    `        \\resumeItem{${lightEscape(i.title)}}\n          {${lightEscape(i.description)}}`
-  ).join('\n');
+function generateExperiences(experiences) {
+  if (!experiences || experiences.length === 0) return '';
 
-  return `\\section{Experience}
-  \\resumeSubHeadingListStart
-    \\resumeActivitySubheading
+  let entries = experiences.map(exp => {
+    let items = exp.items.map(i =>
+      `        \\resumeItem{${lightEscape(i.title)}}\n          {${lightEscape(i.description)}}`
+    ).join('\n');
+
+    return `    \\resumeActivitySubheading
       {${lightEscape(exp.company)}}{${lightEscape(exp.location)}}{${lightEscape(exp.role)}}{${lightEscape(exp.dates)}}
       \\resumeItemListStart
 ${items}
-      \\resumeItemListEnd
+      \\resumeItemListEnd`;
+  }).join('\n    \\vspace{4pt}\n');
+
+  return `\\section{Experience}
+  \\resumeSubHeadingListStart
+${entries}
   \\resumeSubHeadingListEnd
   \\vspace{-2pt}
 `;
@@ -248,9 +253,9 @@ ${items}
 export function generateLatex(data, selection) {
   const { personalInfo, education } = data;
 
-  const selectedExp = selection.experienceId
-    ? data.experiences.find(e => e.id === selection.experienceId)
-    : null;
+  const selectedExperiences = (selection.experienceIds || [])
+    .map(id => data.experiences.find(e => e.id === id))
+    .filter(Boolean);
 
   const selectedProjects = (selection.projectIds || [])
     .map(id => data.projects.find(p => p.id === id))
@@ -282,7 +287,7 @@ export function generateLatex(data, selection) {
         sections += generateEducation(education);
         break;
       case 'experience':
-        sections += generateExperience(selectedExp);
+        sections += generateExperiences(selectedExperiences);
         break;
       case 'projects':
         sections += generateProjects(selectedProjects, selection.projectsSectionTitle || 'Projects');

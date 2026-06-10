@@ -98,7 +98,7 @@ export interface ResumeData {
 
 export interface Selection {
   summaryId: string | null
-  experienceId: string | null
+  experienceIds: string[]
   projectIds: string[]
   activityIds: string[]
   skillsId: string | null
@@ -137,7 +137,7 @@ function App() {
   const [activeTab, setActiveTab] = useState('personal')
   const [selection, setSelection] = useState<Selection>({
     summaryId: null,
-    experienceId: null,
+    experienceIds: [],
     projectIds: [],
     activityIds: [],
     skillsId: null,
@@ -172,17 +172,17 @@ function App() {
 
   // Auto-select defaults when data loads
   useEffect(() => {
-    if (data && selection.experienceId === null) {
+    if (data && selection.experienceIds.length === 0) {
       setSelection(prev => ({
         ...prev,
         summaryId: data.summaries?.[0]?.id || null,
-        experienceId: data.experiences[0]?.id || null,
+        experienceIds: data.experiences[0] ? [data.experiences[0].id] : [],
         projectIds: data.projects.slice(0, 5).map(p => p.id),
         activityIds: data.activities.map(a => a.id),
         skillsId: data.skills[0]?.id || null,
       }))
     }
-  }, [data, selection.experienceId])
+  }, [data, selection.experienceIds.length])
 
   const handleCompile = async () => {
     setCompiling(true)

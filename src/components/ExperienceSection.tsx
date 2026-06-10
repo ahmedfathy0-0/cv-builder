@@ -11,7 +11,13 @@ export default function ExperienceSection({ onEdit, onAdd }: Props) {
   if (!data) return null
 
   const handleSelect = (id: string) => {
-    setSelection(prev => ({ ...prev, experienceId: id }))
+    setSelection(prev => {
+      const selected = prev.experienceIds || []
+      if (selected.includes(id)) {
+        return { ...prev, experienceIds: selected.filter(expId => expId !== id) }
+      }
+      return { ...prev, experienceIds: [...selected, id] }
+    })
   }
 
   const handleDelete = async (id: string) => {
@@ -19,9 +25,10 @@ export default function ExperienceSection({ onEdit, onAdd }: Props) {
     try {
       await fetch(`/api/data/experiences/${id}`, { method: 'DELETE' })
       await refreshData()
-      if (selection.experienceId === id) {
-        setSelection(prev => ({ ...prev, experienceId: null }))
-      }
+      setSelection(prev => ({
+        ...prev,
+        experienceIds: (prev.experienceIds || []).filter(expId => expId !== id)
+      }))
       addToast('Experience deleted', 'success')
     } catch {
       addToast('Failed to delete', 'error')
@@ -46,13 +53,13 @@ export default function ExperienceSection({ onEdit, onAdd }: Props) {
         {data.experiences.map(exp => (
           <div
             key={exp.id}
-            className={`radio-card ${selection.experienceId === exp.id ? 'selected' : ''}`}
+            className={`radio-card ${(selection.experienceIds || []).includes(exp.id) ? 'selected' : ''}`}
             onClick={() => handleSelect(exp.id)}
           >
             <input
-              type="radio"
+              type="checkbox"
               name="experience"
-              checked={selection.experienceId === exp.id}
+              checked={(selection.experienceIds || []).includes(exp.id)}
               onChange={() => handleSelect(exp.id)}
             />
             <div style={{ flex: 1 }}>
