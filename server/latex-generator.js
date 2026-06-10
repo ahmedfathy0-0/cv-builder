@@ -45,6 +45,8 @@ function generatePreamble(compact = false) {
 
   return `\\documentclass[letterpaper,11pt]{article}
 
+\\usepackage[T1]{fontenc}
+\\usepackage[utf8]{inputenc}
 \\usepackage{latexsym}
 \\usepackage[empty]{fullpage}
 \\usepackage{titlesec}
@@ -52,7 +54,7 @@ function generatePreamble(compact = false) {
 \\usepackage[usenames,dvipsnames]{color}
 \\usepackage{verbatim}
 \\usepackage{enumitem}
-\\usepackage[pdftex]{hyperref}
+\\usepackage[pdftex,hidelinks]{hyperref}
 \\usepackage{fancyhdr}
 
 \\pagestyle{fancy}
@@ -75,7 +77,7 @@ ${lineSpread}
 ${itemizeConfig}
 
 \\titleformat{\\section}{
-  \\vspace{${sectionTitleVSpace}}\\scshape\\raggedright\\large
+  \\vspace{${sectionTitleVSpace}}\\raggedright\\large\\bfseries
 }{}{0em}{}[\\color{black}\\titlerule \\vspace{${sectionRuleVSpace}}]
 
 \\newcommand{\\resumeItem}[2]{\\item\\small{\\textbf{#1}{: #2 \\vspace{${resumeItemVSpace}}}}}
@@ -91,19 +93,19 @@ ${itemizeConfig}
 \\newcommand{\\resumeProjectSubheading}[3]{
   \\vspace{-1pt}\\item
     \\begin{tabular*}{0.97\\textwidth}{l@{\\extracolsep{\\fill}}r}
-      \\textbf{#1} $|$ \\textit{\\small#2} & #3 \\\\
+      \\textbf{#1} \\textbar{} \\textit{\\small#2} & #3 \\\\
     \\end{tabular*}\\vspace{${listSubheadingVSpace}}
 }
 
 \\newcommand{\\resumeActivitySubheading}[4]{
   \\vspace{-1pt}\\item
     \\begin{tabular*}{0.97\\textwidth}{l@{\\extracolsep{\\fill}}r}
-      \\textbf{#1} $|$ \\textit{\\small#3} & \\textit{\\small#2} $|$ \\textit{\\small #4} \\\\
+      \\textbf{#1} \\textbar{} \\textit{\\small#3} & \\textit{\\small#2} \\textbar{} \\textit{\\small #4} \\\\
     \\end{tabular*}\\vspace{${listSubheadingVSpace}}
 }
 
 \\newcommand{\\resumeSubItem}[2]{\\resumeItem{#1}{#2}\\vspace{-4pt}}
-\\renewcommand{\\labelitemii}{$\\circ$}
+\\renewcommand{\\labelitemii}{\\textendash}
 \\newcommand{\\resumeSubHeadingListStart}{\\begin{itemize}[leftmargin=*]}
 \\newcommand{\\resumeSubHeadingListEnd}{\\end{itemize}}
 \\newcommand{\\resumeItemListStart}{\\vspace*{${subsectionListGap}}\\begin{itemize}[leftmargin=*,topsep=0pt,itemsep=${itemListItemSep},parsep=0pt,partopsep=0pt]}
@@ -113,13 +115,13 @@ ${itemizeConfig}
 
 function generateHeading(info) {
   return `\\begin{center}
-    \\textbf{\\Huge \\scshape ${lightEscape(info.name)}} \\\\ \\vspace{1pt}
+    {\\Huge \\textbf{${lightEscape(info.name)}}} \\\\ \\vspace{1pt}
     \\small ${lightEscape(info.title)} \\\\
-    \\href{mailto:${info.email}}{\\underline{${info.email}}} $|$
-    ${lightEscape(info.phone)} $|$
-    \\href{${info.linkedin}}{\\underline{LinkedIn}} $|$
-    \\href{${info.github}}{\\underline{GitHub}} $|$
-    \\href{${info.portfolio}}{\\underline{Portfolio}} $|$
+    \\href{mailto:${info.email}}{\\underline{${info.email}}} \\textbar{}
+    ${lightEscape(info.phone)} \\textbar{}
+    \\href{${info.linkedin}}{\\underline{LinkedIn}} \\textbar{}
+    \\href{${info.github}}{\\underline{GitHub}} \\textbar{}
+    \\href{${info.portfolio}}{\\underline{Portfolio}} \\textbar{}
     ${lightEscape(info.address)}
 \\end{center}
 `;
@@ -127,8 +129,8 @@ function generateHeading(info) {
 
 function generateSummary(summary) {
   if (!summary) return '';
-  return `\section{Professional Summary}
-  \small ${lightEscape(summary.content)}
+  return `\\section{Professional Summary}
+  \\small ${lightEscape(summary.content)}
   \\vspace{2pt}
 `;
 }
@@ -246,35 +248,28 @@ ${items}
 export function generateLatex(data, selection) {
   const { personalInfo, education } = data;
 
-  // Find selected experience
   const selectedExp = selection.experienceId
     ? data.experiences.find(e => e.id === selection.experienceId)
     : null;
 
-  // Find selected projects
   const selectedProjects = (selection.projectIds || [])
     .map(id => data.projects.find(p => p.id === id))
     .filter(Boolean);
 
-  // Find selected activities
   const selectedActivities = (selection.activityIds || [])
     .map(id => data.activities.find(a => a.id === id))
     .filter(Boolean);
 
-  // Find selected skills
   const selectedSkills = selection.skillsId
     ? data.skills.find(s => s.id === selection.skillsId)
     : null;
 
-  // Find selected summary
   const selectedSummary = selection.summaryId
     ? data.summaries?.find(s => s.id === selection.summaryId)
     : null;
 
-  // Use custom personal info if provided
   const info = { ...personalInfo, ...(selection.personalInfo || {}) };
 
-  // Build sections in order
   const sectionOrder = selection.sectionOrder || ['summary', 'education', 'experience', 'activities', 'projects', 'skills'];
 
   let sections = '';
