@@ -104,6 +104,7 @@ export interface Selection {
   skillsId: string | null
   sectionOrder: string[]
   projectsSectionTitle: string
+  experiencesSectionTitle?: string
   compactPdf: boolean
 }
 
@@ -143,6 +144,7 @@ function App() {
     skillsId: null,
     sectionOrder: [...allSections],
     projectsSectionTitle: 'Projects',
+    experiencesSectionTitle: 'Experience',
     compactPdf: false
   })
   const [pdfUrl, setPdfUrl] = useState<string | null>(null)

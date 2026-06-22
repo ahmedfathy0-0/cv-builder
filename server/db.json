@@ -13,7 +13,7 @@
     "university": "Cairo University, Faculty of Engineering",
     "location": "Giza, Egypt",
     "degree": "B.Sc. in Computer Engineering",
-    "gpa": "3.7",
+    "gpa": "3.6",
     "startYear": "2022",
     "endYear": "2027"
   },
@@ -26,7 +26,7 @@
     {
       "id": "summary-hardware",
       "variant": "Hardware / FPGA",
-      "content": "Hardware and Embedded Systems Engineer with hands-on experience in FPGA development, digital circuit design, and ASIC flow. Skilled in RTL design using Verilog/VHDL, and experienced in validating complex architectures including pipelined processors and cryptographic accelerators."
+      "content": "Hardware Engineer specializing in FPGA/ASIC development and RTL design, with a proven track record in validating complex processors and accelerators, and a distinction grade in VLSI design, and an excellent grade in Computer Architecture.."
     },
     {
       "variant": "Software Ejada",
@@ -44,28 +44,16 @@
       "dates": "May 2026",
       "items": [
         {
-          "title": "FFD Engine Architecture",
-          "description": "Architected a Free-Form Deformation (FFD) engine in C++, delivering a highly requested 2D rigging feature that allows animators to warp and distort image textures non-destructively."
+          "title": "FFD Engine",
+          "description": "Implementeed a non-destructive Free-Form Deformation (FFD) engine using C++, featuring dual-mode rendering (Uniform Grid with Catmull-Rom/Bilinear interpolation and Custom Mesh via Delaunay Triangulation)."
         },
         {
-          "title": "Rendering Pipeline",
-          "description": "Developed a dual-mode mathematical rendering pipeline: implemented a Uniform Grid system using Bilinear and Catmull-Rom spline interpolation, and a Custom Mesh system powered by a custom-built Delaunay Triangulation algorithm."
+          "title": "UI & Interaction",
+          "description": "Built a state-driven GTKmm UI tool for real-time polygon manipulation, including coordinate mapping (affine transformations) to translate viewport mouse interactions into local layer spaces."
         },
         {
-          "title": "UI Tooling",
-          "description": "Built a state-driven interactive UI tool using GTKmm and sigc++, enabling users to configure parameters, plot polygon control points on the canvas, and view real-time wireframe generation."
-        },
-        {
-          "title": "Scene-Graph Automation",
-          "description": "Automated complex scene-graph operations via Synfig’s Action API; engineered logic to automatically group layers, transfer origin/transformation parameters, and link dynamic data nodes with full Undo/Redo stack support."
-        },
-        {
-          "title": "Coordinate Transformations",
-          "description": "Applied linear algebra and affine transformations to map global viewport mouse interactions into local layer coordinate spaces, dynamically calculating matrix inversions for scale, skew, and rotation."
-        },
-        {
-          "title": "Core Rendering Engine",
-          "description": "Extended the core canvas rendering engine to natively recognize FFD data structures, automatically drawing editable Bezier wireframes and draggable control vertices."
+          "title": "Automation & Integration",
+          "description": "Automated complex scene-graph operations and integrated custom FFD data structures directly into the core rendering engine with full Undo/Redo support."
         }
       ]
     },
@@ -162,6 +150,20 @@
           "description": "Implemented reporting features to analyze sales trends and inventory status."
         }
       ]
+    },
+    {
+      "variant": "",
+      "company": "SI-Vision",
+      "location": "Cairo",
+      "role": "ASIC Design Internship",
+      "dates": "2026",
+      "items": [
+        {
+          "title": "Note",
+          "description": "I have been just accepted into the internship so I can't add more details about the intern."
+        }
+      ],
+      "id": "5b086027-b42b-49e9-ba58-be8481fc0e40"
     }
   ],
   "projects": [

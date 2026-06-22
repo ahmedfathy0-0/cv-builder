@@ -150,7 +150,7 @@ function generateEducation(edu) {
 `;
 }
 
-function generateExperiences(experiences) {
+function generateExperiences(experiences, sectionTitle = 'Experience') {
   if (!experiences || experiences.length === 0) return '';
 
   let entries = experiences.map(exp => {
@@ -165,7 +165,7 @@ ${items}
       \\resumeItemListEnd`;
   }).join('\n    \\vspace{4pt}\n');
 
-  return `\\section{Experience}
+  return `\\section{${lightEscape(sectionTitle)}}
   \\resumeSubHeadingListStart
 ${entries}
   \\resumeSubHeadingListEnd
@@ -287,7 +287,7 @@ export function generateLatex(data, selection) {
         sections += generateEducation(education);
         break;
       case 'experience':
-        sections += generateExperiences(selectedExperiences);
+        sections += generateExperiences(selectedExperiences, selection.experiencesSectionTitle || 'Experience');
         break;
       case 'projects':
         sections += generateProjects(selectedProjects, selection.projectsSectionTitle || 'Projects');
